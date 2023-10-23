@@ -1,9 +1,9 @@
 const fs = require('fs')
-const { parse } = require('csv-parse/sync')
+const { parse } = require('txt-parse/sync')
 const path = require('path')
 
 // read the channels from csv file
-const file = path.join(__dirname, '../channels.csv')
+const file = path.join(__dirname, '../beinsports-haber.txt')
 const contents = fs.readFileSync(file, 'utf8')
 const channels = parse(contents, {
   columns: true,
